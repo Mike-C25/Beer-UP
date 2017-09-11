@@ -1,0 +1,73 @@
+body {
+    background: #f2f2f2;
+    font-family: 'Indie Flower', cursive;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("../images/beerPattern.jpg");
+    /*https://www.google.com/search?q=crystal+wallpaper&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjctrr_8tfVAhUq34MKHRIVBj4Q_AUICigB&biw=1366&bih=638#imgrc=S6uIbuiSbG9GOM:*/
+    
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    transition: all .2s ease-in-out;
+}
+
+h3{
+	font-size: 45px;
+}
+
+.card-container {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    display: inline-block;
+    height: 300px;
+    width: 15%;
+    margin: 0px 15px;
+    background: white;
+    border: 5px solid #D25512;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.card:hover {
+    background: #D25512;
+}
+
+.card:hover h3 {
+    color: white;
+}
+
+.card-container .card h3 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+    .card {
+        margin-bottom: 40px;
+        width: 40%;
+    }
+}
