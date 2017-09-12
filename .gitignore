@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 js/keys.js
+js/bundle.js
 node_modules
-=======
-/js/keys.js
-/js/bundle.js
-/node_modules
->>>>>>> 589dc45b6ba72b04d8de7f01448eaa593bd6beda
 .DS_store
