@@ -8,6 +8,7 @@ $(document).ready(function() {
     	url: 'https://beer-up-api.herokuapp.com/untappd',
     	method: 'GET'
     }).done(function(res){
+    	console.log(res);
     	clientID = res.client_id;
     	clientSecret = res.client_secret;
     });
