@@ -5,7 +5,7 @@ $(document).ready(function() {
     var clientSecret;
 
     $.ajax({
-    	url: 'beer-up-api.herokuapp.com/untappd',
+    	url: 'https://beer-up-api.herokuapp.com/untappd',
     	method: 'GET'
     }).done(function(res){
     	clientID = res.client_id;
