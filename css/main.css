@@ -1,16 +1,16 @@
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
     overflow: auto;
 }
+
 .bg {
     /* The image used */
-    background-image: url("../images/beerPattern.jpg");
+    /* background-image: url("../images/beerPattern.jpg"); */
     /*https://www.google.com/search?q=crystal+wallpaper&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjctrr_8tfVAhUq34MKHRIVBj4Q_AUICigB&biw=1366&bih=638#imgrc=S6uIbuiSbG9GOM:*/
-    
     /* Full height */
     /*height: 100px;*/
-
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@ h6 {
     transition: all .2s ease-in-out;
 }
 
-h3{
+h3 {
     font-size: 45px;
 }
 
@@ -42,26 +42,34 @@ h3{
     display: inline-block;
     height: 300px;
     width: 30%;
+    margin: 20px;
     background: white;
     border: 5px solid #D25512;
     border-radius: 5px;
     cursor: pointer;
-    transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out;
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#Lager{
-    background-image: url("../images/Lager.jpg"); 
+#lager {
+    background-image: url("../images/Lager.jpg");
 }
 
-div[id="Pale Ale"]{
- background-image: url("../images/Pale Ale.jpg");   
+div#pale-ale {
+    background-image: url("../images/Pale Ale.jpg");
 }
 
-#Lager:hover, div[id="Pale Ale"]:hover, #Stout:hover, #Pilsner:hover, #IPA:hover, #Porter:hover, div[id="Wheat Beer"]:hover, div[id="Double IPA"]:hover{
+#lager:hover,
+div#pale-ale:hover,
+#stout:hover,
+#pilsner:hover,
+#ipa:hover,
+#porter:hover,
+div#wheat-beer:hover,
+div#double-ipa:hover {
     background-image: none;
     background: #D25512;
 }
@@ -80,5 +88,11 @@ div[id="Pale Ale"]{
 @media screen and (max-width: 1200px) {
     .card {
         width: 40%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .card {
+        width: 80%;
     }
 }
