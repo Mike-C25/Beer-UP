@@ -24,6 +24,7 @@ h4,
 h5,
 h6 {
     transition: all .2s ease-in-out;
+    background: #D25512;
 }
 
 h3 {
@@ -47,7 +48,7 @@ h3 {
     border: 5px solid #D25512;
     border-radius: 5px;
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
 
     background-position: center;
     background-repeat: no-repeat;
@@ -55,11 +56,35 @@ h3 {
 }
 
 #lager {
-    background-image: url("../images/Lager.jpg");
+    background-image: url("../images/Lager 2.jpg");
 }
 
 div#pale-ale {
-    background-image: url("../images/Pale Ale.jpg");
+    background-image: url("../images/Pale Ale 2.jpg");
+}
+
+#stout {
+    background-image: url("../images/Stout 2.jpg");
+}
+
+#pilsner {
+    background-image: url("../images/pilsner.jpg");
+}
+
+#ipa {
+    background-image: url("../images/IPA.JPG");
+}
+
+div#double-ipa {
+    background-image: url("../images/Double IPA.jpg");
+}
+
+#porter {
+    background-image: url("../images/Porter.jpg");
+}
+
+div#wheat-beer {
+    background-image: url("../images/Wheat Beer.jpg");
 }
 
 #lager:hover,
@@ -74,7 +99,7 @@ div#double-ipa:hover {
     background: #D25512;
 }
 
-.card:hover h3 {
+.card:hover h3{
     color: white;
 }
 
@@ -83,6 +108,21 @@ div#double-ipa:hover {
     bottom: 0px;
     left: 0px;
     right: 0px;
+}
+
+.card-container .card p {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    color: white;
+    display: none;
+    text-align: left;
+    font-size: 18px;
+}
+
+.card:hover p{
+    display: block;
 }
 
 @media screen and (max-width: 1200px) {
