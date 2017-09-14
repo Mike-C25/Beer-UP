@@ -24,7 +24,7 @@ $(document).ready(function() {
 
 
     // console.log(clientID, clientSecret);
-    var beerType = localStorage.getItem('beerChoice');
+    var beerType = sessionStorage.getItem('beerChoice');
     console.log(beerType);
     var queryURL = "https://api.untappd.com/v4/search/beer?q=" + beerType + "&" + "limit=50&" + clientID + "&" + clientSecret;
     var bidArray = [];
