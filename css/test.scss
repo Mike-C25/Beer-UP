@@ -1,0 +1,10 @@
+a.blue {
+    div {
+        &:before {
+            &[id="Lager"]
+        }
+        p {
+            color: blue;
+        }
+    }
+}
