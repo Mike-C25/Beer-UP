@@ -66,15 +66,15 @@ $(document).ready(function() {
             var descriptionBlock = $("<p>");
             var statBlock = $("<div>");
             var abvSection = $("<p>");
-            var ibuSection = $("<p>");
+            var ibuSection = $("<p>");  
             var rNumber = parseInt(beers);
 
             cardDiv.addClass("cards");
-            numberSpan.addClass("rank-number").html(parseInt(rNumber+1));
-            headerBlock.attr('id', 'results-beer-name').html(beerName);
-            descriptionBlock.html(beerDesc);
-            abvSection.html('ABV: ' + beerABV + '%');
-            ibuSection.html('IBU: ' + beerIBU);
+            numberSpan.addClass("rank-number").text(parseInt(rNumber+1));
+            headerBlock.attr('id', 'results-beer-name').text(beerName);
+            descriptionBlock.text(beerDesc);
+            abvSection.text('ABV: ' + beerABV + '%').attr('class', 'abv');
+            ibuSection.text('IBU: ' + beerIBU).attr('class', 'ibu');
             statBlock.addClass("stats").append(abvSection, ibuSection);
 
 

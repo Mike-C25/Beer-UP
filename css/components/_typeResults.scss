@@ -48,8 +48,72 @@ body {
                 top: 10px;
                 right: 15px;
                 p {
-                    margin: 1px 0px;
+                    margin: 5px 0px;
                     font-size: 12px;
+                    &.abv {
+                        position: relative;
+                        &:before{
+                        	content: '';
+                        	position: absolute;
+                        	transition: all .2s ease-in-out;
+                        	top: 13px;
+                        	right: 0px;
+                        	display: block;	
+                        	opacity: 0;
+                        	padding: 0px;
+                        	height: 0px;
+                        	width: 0px;
+                        }
+                        &:hover {
+                            &:before {
+                                content: "A standard measure of how much alcohol (ethanol) is contained in a given volume of an alcoholic beverage (expressed as a volume percent)";
+                                display: block;
+                                position: absolute;
+                                top: 13px;
+                                right: 0;
+                                opacity: 1;
+                                width: 150px;
+                                height: 160px;
+                                background: rgba(0,0,0,.85);
+                                color: white;
+                                padding: 20px;
+                                line-height: 2.4;
+                                z-index: 10;
+                            }
+                        }
+                    }
+                    &.ibu {
+                        position: relative;
+                        &:before{
+                        	content: '';
+                        	position: absolute;
+                        	transition: all .2s ease-in-out;
+                        	top: 13px;
+                        	right: 0px;
+                        	display: block;	
+                        	opacity: 0;
+                        	padding: 0px;
+                        	height: 0px;
+                        	width: 0px;
+                        }
+                        &:hover {
+                            &:before {
+                                content: "International Bitterness Units are a chemical measurement of the number of bittering compounds, specifically isomerized and oxidized alpha acids, polyphenols, and a few other select bittering chemicals";
+                                display: block;
+                                position: absolute;
+                                top: 13px;
+                                right: 0;
+                                opacity: 1;
+                                width: 150px;
+                                height: 200px;
+                                background: rgba(0,0,0,.85);
+                                color: white;
+                                padding: 20px;
+                                line-height: 2.4;
+                                z-index: 10;
+                            }
+                        }
+                    }
                 }
             }
             p {
