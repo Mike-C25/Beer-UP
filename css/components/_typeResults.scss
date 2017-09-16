@@ -1,0 +1,61 @@
+body {
+    section.results {
+
+        .cards {
+            width: 75%;
+            position: relative;
+            margin: 0px auto;
+            border: 3px solid #edd890;
+            border-radius: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                text-decoration: none;
+                background: #edd890;
+                border: 3px solid #edd890;
+                span {
+                    &.rank-number {
+                        background: white;
+                        color: black;
+                        margin-right: 40px;
+                    }
+                }
+            }
+            span {
+                &.rank-number {
+                    margin-right: 20px;
+                    position: relative;
+                    display: inline-block;
+                    background: black;
+                    transition: all .15s ease-in-out;
+                    color: white;
+                    top: -7px;
+                    text-align: center;
+                    padding: 15px 20px;
+                    margin-left: 15px;
+                }
+            }
+            h2 {
+                display: inline-block;
+                margin: 10px 0px;
+                font-size: 30px;
+            }
+            .stats {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                p {
+                    margin: 1px 0px;
+                    font-size: 12px;
+                }
+            }
+            p {
+                margin: 10px 0px;
+                font-size: 14px;
+            }
+        }
+    }
+}

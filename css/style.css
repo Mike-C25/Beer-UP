@@ -1,0 +1,44 @@
+body section.results .cards {
+  width: 75%;
+  position: relative;
+  margin: 0px auto;
+  border: 3px solid #edd890;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  transition: all .2s ease-in-out;
+  cursor: pointer; }
+  body section.results .cards:hover {
+    text-decoration: none;
+    background: #edd890;
+    border: 3px solid #edd890; }
+    body section.results .cards:hover span.rank-number {
+      background: white;
+      color: black;
+      margin-right: 40px; }
+  body section.results .cards span.rank-number {
+    margin-right: 20px;
+    position: relative;
+    display: inline-block;
+    background: black;
+    transition: all .15s ease-in-out;
+    color: white;
+    top: -7px;
+    text-align: center;
+    padding: 15px 20px;
+    margin-left: 15px; }
+  body section.results .cards h2 {
+    display: inline-block;
+    margin: 10px 0px;
+    font-size: 30px; }
+  body section.results .cards .stats {
+    position: absolute;
+    top: 10px;
+    right: 15px; }
+    body section.results .cards .stats p {
+      margin: 1px 0px;
+      font-size: 12px; }
+  body section.results .cards p {
+    margin: 10px 0px;
+    font-size: 14px; }

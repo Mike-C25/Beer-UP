@@ -7,9 +7,9 @@ $(document).ready(function() {
     // url: 'https://beer-up-api.herokuapp.com/untappd',
     // method: 'GET'
     // }).done(function(res){
-    // 	console.log(res);
-    // 	clientID = res.client_id;
-    // 	clientSecret = res.client_secret;
+    //  console.log(res);
+    //  clientID = res.client_id;
+    //  clientSecret = res.client_secret;
     // });
 
 
@@ -33,20 +33,63 @@ $(document).ready(function() {
         method: 'GET'
     }).done(function(result) {
 
-        for (var i = 0;  i <result.response.beers.count; i++) {
+        for (var i = 0; i < result.response.beers.count; i++) {
             var beerObj = {
                 checkInCount: result.response.beers.items[i].checkin_count,
                 beerName: result.response.beers.items[i].beer.beer_name,
                 beerDescription: result.response.beers.items[i].beer.beer_description,
                 beerID: result.response.beers.items[i].beer.bid,
                 beerRating: "",
-                breweryName: result.response.beers.items[i].brewery.brewery_name
+                beerABV: result.response.beers.items[i].beer.beer_abv,
+                beerIBU: result.response.beers.items[i].beer.beer_ibu,
+                beerStyle: result.response.beers.items[i].beer.beer_style,
+                breweryName: result.response.beers.items[i].brewery.brewery_name,
             };
             Bar.push(beerObj);
         }
 
+        console.log(Bar);
+        for (beers in Bar) {
+            var checkIn = Bar[beers].checkInCount;
+            var beerDesc = Bar[beers].beerDescription;
+            var beerABV = Bar[beers].beerABV;
+            var beerIBU = Bar[beers].beerIBU;
+            var beerName = Bar[beers].beerName;
+            var breweryName = Bar[beers].beerStyle;
 
+
+            var resultsSection = $('.results');
+
+            var cardDiv = $("<div>");
+            var numberSpan = $("<span>");
+            var headerBlock = $("<h2>");
+            var descriptionBlock = $("<p>");
+            var statBlock = $("<div>");
+            var abvSection = $("<p>");
+            var ibuSection = $("<p>");
+            var rNumber = parseInt(beers);
+
+            cardDiv.addClass("cards");
+            numberSpan.addClass("rank-number").html(parseInt(rNumber+1));
+            headerBlock.attr('id', 'results-beer-name').html(beerName);
+            descriptionBlock.html(beerDesc);
+            abvSection.html('ABV: ' + beerABV + '%');
+            ibuSection.html('IBU: ' + beerIBU);
+            statBlock.addClass("stats").append(abvSection, ibuSection);
+
+
+            cardDiv.append(numberSpan, headerBlock, descriptionBlock, statBlock);
+
+            console.log(cardDiv[0]);
+            resultsSection.append(cardDiv[0]);
+            if(beers >= 9){
+                break;
+            }  
+
+        }
     });
+
+
 
 
     // var ratingUrl = "https://api.untappd.com/v4/beer/info/" + beerID + "?&compact=true&" + clientID + "&" + clientSecret;
@@ -72,7 +115,7 @@ $(document).ready(function() {
     //         if (counter < res.length) {
 
     //             console.log(beerID);
-                
+
     //             console.log(ratingUrl);
 
     //         }
