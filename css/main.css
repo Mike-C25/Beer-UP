@@ -125,6 +125,25 @@ div#double-ipa:hover {
     display: block;
 }
 
+.header{
+    background-color: #D25512;
+    font-weight: bold;
+    
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.header h1{
+    font-size: 40px;
+    background-color: transparent;
+}
+
+.header h2{
+    font-size: 36px;
+    background-color: transparent;
+}
+
 @media screen and (max-width: 1200px) {
     .card {
         width: 40%;
