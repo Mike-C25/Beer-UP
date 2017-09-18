@@ -24,70 +24,75 @@ $(document).ready(function() {
 
 
     // console.log(clientID, clientSecret);
+
     var beerType = sessionStorage.getItem('beerChoice');
-    console.log(beerType);
-    var queryURL = "https://api.untappd.com/v4/search/beer?q=" + beerType + "&" + "limit=50&" + clientID + "&" + clientSecret;
-    var bidArray = [];
-    $.ajax({
-        url: queryURL,
-        method: 'GET'
-    }).done(function(result) {
+    if (beerType !== null) {
+        console.log(beerType);
+        var queryURL = "https://api.untappd.com/v4/search/beer?q=" + beerType + "&" + "limit=50&" + clientID + "&" + clientSecret;
+        var bidArray = [];
+        $.ajax({
+            url: queryURL,
+            method: 'GET'
+        }).done(function(result) {
+            console.log(result);
+            for (var i = 0; i < result.response.beers.count; i++) {
+                var beerObj = {
+                    checkInCount: result.response.beers.items[i].checkin_count,
+                    beerName: result.response.beers.items[i].beer.beer_name,
+                    beerDescription: result.response.beers.items[i].beer.beer_description,
+                    beerID: result.response.beers.items[i].beer.bid,
+                    beerRating: "",
+                    beerABV: result.response.beers.items[i].beer.beer_abv,
+                    beerIBU: result.response.beers.items[i].beer.beer_ibu,
+                    beerStyle: result.response.beers.items[i].beer.beer_style,
+                    breweryName: result.response.beers.items[i].brewery.brewery_name,
 
-        for (var i = 0; i < result.response.beers.count; i++) {
-            var beerObj = {
-                checkInCount: result.response.beers.items[i].checkin_count,
-                beerName: result.response.beers.items[i].beer.beer_name,
-                beerDescription: result.response.beers.items[i].beer.beer_description,
-                beerID: result.response.beers.items[i].beer.bid,
-                beerRating: "",
-                beerABV: result.response.beers.items[i].beer.beer_abv,
-                beerIBU: result.response.beers.items[i].beer.beer_ibu,
-                beerStyle: result.response.beers.items[i].beer.beer_style,
-                breweryName: result.response.beers.items[i].brewery.brewery_name,
-            };
-            Bar.push(beerObj);
-        }
+                };
+                Bar.push(beerObj);
+            }
 
-        console.log(Bar);
-        for (beers in Bar) {
-            var checkIn = Bar[beers].checkInCount;
-            var beerDesc = Bar[beers].beerDescription;
-            var beerABV = Bar[beers].beerABV;
-            var beerIBU = Bar[beers].beerIBU;
-            var beerName = Bar[beers].beerName;
-            var breweryName = Bar[beers].beerStyle;
-
-
-            var resultsSection = $('.results');
-
-            var cardDiv = $("<div>");
-            var numberSpan = $("<span>");
-            var headerBlock = $("<h2>");
-            var descriptionBlock = $("<p>");
-            var statBlock = $("<div>");
-            var abvSection = $("<p>");
-            var ibuSection = $("<p>");  
-            var rNumber = parseInt(beers);
-
-            cardDiv.addClass("cards");
-            numberSpan.addClass("rank-number").text(parseInt(rNumber+1));
-            headerBlock.attr('id', 'results-beer-name').text(beerName);
-            descriptionBlock.text(beerDesc);
-            abvSection.text('ABV: ' + beerABV + '%').attr('class', 'abv');
-            ibuSection.text('IBU: ' + beerIBU).attr('class', 'ibu');
-            statBlock.addClass("stats").append(abvSection, ibuSection);
+            console.log(Bar);
+            for (beers in Bar) {
+                var checkIn = Bar[beers].checkInCount;
+                var beerDesc = Bar[beers].beerDescription;
+                var beerABV = Bar[beers].beerABV;
+                var beerIBU = Bar[beers].beerIBU;
+                var beerName = Bar[beers].beerName;
+                var breweryName = Bar[beers].beerStyle;
 
 
-            cardDiv.append(numberSpan, headerBlock, descriptionBlock, statBlock);
+                var resultsSection = $('.results');
 
-            console.log(cardDiv[0]);
-            resultsSection.append(cardDiv[0]);
-            if(beers >= 9){
-                break;
-            }  
+                var cardDiv = $("<div>");
+                var numberSpan = $("<span>");
+                var headerBlock = $("<h2>");
+                var descriptionBlock = $("<p>");
+                var statBlock = $("<div>");
+                var abvSection = $("<p>");
+                var ibuSection = $("<p>");
+                var rNumber = parseInt(beers);
 
-        }
-    });
+                cardDiv.addClass("cards");
+                numberSpan.addClass("rank-number").text(parseInt(rNumber + 1));
+                headerBlock.attr('id', 'results-beer-name').text(beerName);
+                descriptionBlock.text(beerDesc);
+                abvSection.text('ABV: ' + beerABV + '%').attr('class', 'abv');
+                ibuSection.text('IBU: ' + beerIBU).attr('class', 'ibu');
+                statBlock.addClass("stats").append(abvSection, ibuSection);
+
+
+                cardDiv.append(numberSpan, headerBlock, descriptionBlock, statBlock);
+
+                console.log(cardDiv[0]);
+                resultsSection.append(cardDiv[0]);
+                if (beers >= 9) {
+                    break;
+                }
+
+            }
+        });
+    }
+
 
 
 
