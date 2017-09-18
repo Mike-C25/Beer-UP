@@ -1,5 +1,7 @@
+var Bar = [];
+
 $(document).ready(function() {
-    var Bar = [];
+    
     var clientID;
     var clientSecret;
 
@@ -29,6 +31,7 @@ $(document).ready(function() {
     if (beerType !== null) {
         console.log(beerType);
         var queryURL = "https://api.untappd.com/v4/search/beer?q=" + beerType + "&" + "limit=50&" + clientID + "&" + clientSecret;
+        console.log(queryURL);
         var bidArray = [];
         $.ajax({
             url: queryURL,
@@ -46,6 +49,7 @@ $(document).ready(function() {
                     beerIBU: result.response.beers.items[i].beer.beer_ibu,
                     beerStyle: result.response.beers.items[i].beer.beer_style,
                     breweryName: result.response.beers.items[i].brewery.brewery_name,
+                    location: result.response.beers.items[i].brewery.location,
 
                 };
                 Bar.push(beerObj);
@@ -73,6 +77,8 @@ $(document).ready(function() {
                 var rNumber = parseInt(beers);
 
                 cardDiv.addClass("cards");
+                cardDiv.attr("data-id",beers);
+                console.log(cardDiv);
                 numberSpan.addClass("rank-number").text(parseInt(rNumber + 1));
                 headerBlock.attr('id', 'results-beer-name').text(beerName);
                 descriptionBlock.text(beerDesc);
