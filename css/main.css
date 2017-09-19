@@ -3,6 +3,7 @@ html {
     height: 100%;
     margin: 0;
     overflow: auto;
+    font-family: 'Indie Flower', cursive;
 }
 
 .bg {
@@ -24,7 +25,9 @@ h4,
 h5,
 h6 {
     transition: all .2s ease-in-out;
-    background:#edd890;
+    background: #edd890;
+    letter-spacing: 1px;
+    line-height: 1.4;
 }
 
 h3 {
@@ -41,7 +44,7 @@ h3 {
 .card {
     position: relative;
     display: inline-block;
-    height: 300px;
+    height: 425px;
     width: 30%;
     margin: 20px;
     background: black;
@@ -99,7 +102,7 @@ div#double-ipa:hover {
     background: #edd890;
 }
 
-.card:hover h3{
+.card:hover h3 {
     color: black;
 }
 
@@ -119,36 +122,45 @@ div#double-ipa:hover {
     display: none;
     text-align: left;
     font-size: 18px;
+    line-height: 1.4;
+    padding: 12px;
 }
 
-.card:hover p{
+.card:hover p {
     display: block;
 }
 
-.header{
+.header {
     background-color: #edd890;
     font-weight: bold;
-    
+    position: relative;
     text-align: center;
     margin: 20px;
     border-radius: 10px;
 }
 
 #credits-img {
-    padding:3px;
-    position:absolute;
-    left:40px;
-    height:70px;
-    width:200px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+    width: 150px;
+    opacity: .45;
+    transition: all .5s ease-in-out;
 }
 
-.header h1{
-    font-size: 40px;
+#credits-img:hover {
+    opacity: 1;
+}
+
+.header h1 {
+    font-size: 55px;
     background-color: transparent;
 }
 
-.header h2{
-    font-size: 36px;
+.header h2 {
+    font-size: 24px;
     background-color: transparent;
 }
 
