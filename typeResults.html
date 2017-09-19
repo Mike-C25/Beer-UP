@@ -9,19 +9,29 @@
     <!-- <link rel="stylesheet" href="css/main.css"> -->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <style type="text/css">
+        #map{
+            height: 100%;
+            width: 100%;
+        }
+        .map{
+            width: 100%;
+            height: 400px;
+        }
+
+    </style>
 </head>
 
 <body>
     <section class="results">
     </section>
     <section class="map">
-      <div id="map"> </div>	
+        <div id="map" height=250px width="250px"> </div>
     </section>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/untappd.js"></script>
     <script type="text/javascript" src="./js/maps.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8a8x-3TdPvdkvSQ94_RgPPyU5kkuaJnM&callback=initMap"
-  type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8a8x-3TdPvdkvSQ94_RgPPyU5kkuaJnM&callback" type="text/javascript"></script>
 </body>
 
 </html>
