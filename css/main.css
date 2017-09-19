@@ -134,6 +134,14 @@ div#double-ipa:hover {
     border-radius: 10px;
 }
 
+#credits-img {
+    padding:3px;
+    position:absolute;
+    left:40px;
+    height:70px;
+    width:200px;
+}
+
 .header h1{
     font-size: 40px;
     background-color: transparent;
