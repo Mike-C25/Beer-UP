@@ -8,7 +8,7 @@ html {
 
 .bg {
     /* The image used */
-    background: #fefefe;
+    background: #fff8ea;
     /*https://www.google.com/search?q=crystal+wallpaper&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjctrr_8tfVAhUq34MKHRIVBj4Q_AUICigB&biw=1366&bih=638#imgrc=S6uIbuiSbG9GOM:*/
     /* Full height */
     /*height: 100px;*/
@@ -145,7 +145,7 @@ div#double-ipa:hover {
 
 #credits-img {
     position: absolute;
-    right: 20px;
+    right: 25px;
     top: 50%;
     transform: translateY(-50%);
     height: auto;

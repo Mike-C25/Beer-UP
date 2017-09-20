@@ -1,5 +1,6 @@
 body {
     font-family: 'Indie Flower', cursive;
+    background: #fff8ea;
     section.head-bar {
         .head {
             background-color: #edd890;
@@ -80,6 +81,7 @@ body {
                 text-decoration: none;
                 background: #edd890;
                 border: 3px solid #edd890;
+                transform: scale(1.01);
                 span {
                     &.rank-number {
                         background: white;
