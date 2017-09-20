@@ -18,8 +18,8 @@ function initMap() {
         center: uluru,
         zoom: 12
     });
-    console.log("done");
-    console.log(map);
+    // console.log("done");
+    // console.log(map);
 
     marker = new google.maps.Marker({
         position: uluru,
@@ -40,7 +40,7 @@ $(document).on("click", '.backButt', function() {
 
     //Transition Out Map Elements
 
-    $("#header-info").text("Click a Beer to see its original brewery location!").delay(100).fadeTo(500, 1);
+    $("#header-info").text("Click a Beer to see its brewery location!").delay(100).fadeTo(500, 1);
     $(".map").toggleClass("trig");
     $(".results").fadeIn(1000);
     $(this).fadeOut();
@@ -57,7 +57,27 @@ $(document).on("click", '.cards', function() {
     var longitude = Bar[iteration].location.lng;
     var city = Bar[iteration].location.brewery_city;
     var state = Bar[iteration].location.brewery_state;
-    var locationText = "Location: " + city + ", " + state;
+    console.log(city, state);
+
+    var locationText = "";
+	//Output location text based on results
+    if(city !== "" && state !== ""){
+    	locationText = "Location: " + city + ", " + state;
+    }else if(city === "" && state!== ""){
+    	locationText = "Location: " + state;
+    }else if(city !== "" && state === ""){
+    	locationText = "Location: " + city;
+    }else if(city === "" && state === ""){
+    	locationText = "City State Unknown";
+    }else{
+    	console.log("Logic went wrong.")
+    }
+
+    city !== "" ? "Location: " + city + ", " + state : "Location: " + state; 
+
+    // "Location: " + city + ", " + state;
+
+
 
     uluru = {
         lat: latitude,
