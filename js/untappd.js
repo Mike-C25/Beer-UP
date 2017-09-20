@@ -4,16 +4,20 @@ $(document).ready(function() {
     
     var clientID;
     var clientSecret;
+    var tempClient;
+    var tempSecret;
 
-    // $.ajax({
-    // url: 'https://beer-up-api.herokuapp.com/untappd',
-    // method: 'GET'
-    // }).done(function(res){
-    //  console.log(res);
-    //  clientID = res.client_id;
-    //  clientSecret = res.client_secret;
-    // });
+    $.ajax({
+    url: 'https://beer-up-api.herokuapp.com/untappd',
+    method: 'GET'
+    }).done(function(res){
+     console.log(res);
+     tempClient = res.client_id;
+     tempSecret = res.client_secret;
+    });
 
+    console.log(tempClient);
+    console.log(tempSecret);
 
     // var clientID = keys.clientID;
     // var clientSecret = keys.clientSecret;

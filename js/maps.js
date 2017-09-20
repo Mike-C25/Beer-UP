@@ -1,4 +1,14 @@
 var marker;
+
+$(document).ready(function() {
+   //Hide Map
+    $(".map").hide();
+
+
+});
+
+
+//Google Init Map function
 function initMap() {
     google.maps.visualRefresh = true;
     console.log(uluru);
@@ -20,25 +30,21 @@ function initMap() {
 
 
 
-$(document).ready(function() {
-    // console.log(Bar);
-    $(".map").hide();
-
-
-});
-
+//Return to Results Section
 $(document).on("click", '.backButt', function() {
+	//Reset Google Maps
     google.maps.visualRefresh = true;
     google.maps.event.trigger(map, 'resize');
     marker.setMap(null);
+
+    //Transition Out Map Elements
     $(".results").fadeIn(1000);
-    $(".map").fadeTo(.0001);
-    $("#map").empty();
+    $(".map").toggleClass("trig")
     $(this).fadeOut();
 });
 
 
-
+//Go to Map Section
 $(document).on("click", '.cards', function() {
     var iteration = $(this).attr("data-id")
     console.log(iteration)
@@ -51,17 +57,13 @@ $(document).on("click", '.cards', function() {
         lat: latitude,
         lng: longitude
     };
-
     // console.log(latitude);
     // console.log(longitude);
-
     initMap();
     $(".results").fadeOut();
     $(".map").fadeIn(1000);
     $(".backButt").fadeIn(1000);
-
-
-
+    $(".map").toggleClass("trig");
 
 
 
