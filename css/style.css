@@ -1,6 +1,6 @@
 body {
   font-family: 'Indie Flower', cursive;
-  background: #fff8ea; }
+  background: #fffcf7; }
   body section.head-bar .head {
     background-color: #edd890;
     font-weight: bold;
@@ -68,7 +68,8 @@ body {
     margin-bottom: 15px;
     padding: 10px;
     transition: all .2s ease-in-out;
-    cursor: pointer; }
+    cursor: pointer;
+    background: #fcf4db; }
     body section.results .cards:hover {
       text-decoration: none;
       background: #edd890;
