@@ -119,6 +119,7 @@ div#double-ipa:hover {
     left: 0px;
     right: 0px;
     color: black;
+    font-family: 'avenir', sans-serif;
     display: none;
     text-align: left;
     font-size: 18px;
@@ -153,8 +154,8 @@ div#double-ipa:hover {
     transition: all .5s ease-in-out;
 }
 
-@media screen and (max-width: 920px){
-    #credits-img{
+@media screen and (max-width: 920px) {
+    #credits-img {
         position: relative;
         padding: 20px;
         top: auto;

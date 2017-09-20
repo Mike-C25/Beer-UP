@@ -34,6 +34,7 @@ $(document).on("click", '.backButt', function() {
     $(".results").fadeIn(1000);
     $(".map").fadeTo(.0001);
     $("#map").empty();
+    $(this).fadeOut();
 });
 
 
@@ -57,6 +58,7 @@ $(document).on("click", '.cards', function() {
     initMap();
     $(".results").fadeOut();
     $(".map").fadeIn(1000);
+    $(".backButt").fadeIn(1000);
 
 
 

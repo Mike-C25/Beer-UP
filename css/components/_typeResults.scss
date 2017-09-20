@@ -1,4 +1,64 @@
 body {
+    font-family: 'Indie Flower', cursive;
+    section.head-bar {
+        .head {
+            background-color: #edd890;
+            font-weight: bold;
+            position: relative;
+            text-align: center;
+            margin: 20px;
+            border-radius: 10px;
+            transition: all .2s ease-in-out;
+            h1 {
+                font-size: 55px;
+                padding: 15px;
+            }
+        }
+    }
+    .return-home {
+        height: 50px;
+        width: 50px;
+        position: fixed;
+        background: #edd890;
+        color: black;
+        top: 50%;
+        cursor: pointer;
+        transition: all .33s ease-in-out .33s;
+        z-index: 11;
+        &:before {
+            content: 'Return to homepage';
+            display: inline-block;
+            width: 75%;
+            height: auto;
+            top: 18px;
+            /* float: right; */
+            position: absolute;
+            right: 0;
+            opacity: 0;
+           transition: opacity .2s linear 0s;
+        }
+        &:hover {
+            width: 200px;
+            transition: all .33s ease-in-out 0s;
+            &:before {
+                opacity: 1;
+                transition: opacity .2s linear .25s;
+            }
+            span {
+                margin-left: 15px;
+            }
+        }
+        span {
+            margin-left: 5%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            vertical-align: middle;
+            height: inherit;
+            margin-left: 20px;
+            transition: all .2s ease-in-out;
+        }
+    }
     section.results {
 
         .cards {
@@ -32,16 +92,20 @@ body {
                     background: black;
                     transition: all .15s ease-in-out;
                     color: white;
-                    top: -7px;
+                    top: 0px;
                     text-align: center;
-                    padding: 15px 20px;
+                    padding: 10px 20px;
                     margin-left: 15px;
+                    font-size: 28px;
                 }
             }
             h2 {
+                position: relative;
                 display: inline-block;
                 margin: 10px 0px;
-                font-size: 30px;
+                font-size: 34px;
+                top: 15px;
+                font-weight: bold;
             }
             .stats {
                 position: absolute;
@@ -49,20 +113,21 @@ body {
                 right: 15px;
                 p {
                     margin: 5px 0px;
-                    font-size: 12px;
+                    font-size: 11px;
+                    padding: 0px;
                     &.abv {
                         position: relative;
-                        &:before{
-                        	content: '';
-                        	position: absolute;
-                        	transition: all .2s ease-in-out;
-                        	top: 13px;
-                        	right: 0px;
-                        	display: block;	
-                        	opacity: 0;
-                        	padding: 0px;
-                        	height: 0px;
-                        	width: 0px;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            transition: all .2s ease-in-out;
+                            top: 13px;
+                            right: 0px;
+                            display: block;
+                            opacity: 0;
+                            padding: 0px;
+                            height: 0px;
+                            width: 0px;
                         }
                         &:hover {
                             &:before {
@@ -72,9 +137,9 @@ body {
                                 top: 13px;
                                 right: 0;
                                 opacity: 1;
-                                width: 150px;
-                                height: 160px;
-                                background: rgba(0,0,0,.85);
+                                width: 250px;
+                                height: auto;
+                                background: rgba(0, 0, 0, .85);
                                 color: white;
                                 padding: 20px;
                                 line-height: 2.4;
@@ -84,17 +149,17 @@ body {
                     }
                     &.ibu {
                         position: relative;
-                        &:before{
-                        	content: '';
-                        	position: absolute;
-                        	transition: all .2s ease-in-out;
-                        	top: 13px;
-                        	right: 0px;
-                        	display: block;	
-                        	opacity: 0;
-                        	padding: 0px;
-                        	height: 0px;
-                        	width: 0px;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            transition: all .2s ease-in-out;
+                            top: 13px;
+                            right: 0px;
+                            display: block;
+                            opacity: 0;
+                            padding: 0px;
+                            height: 0px;
+                            width: 0px;
                         }
                         &:hover {
                             &:before {
@@ -104,9 +169,9 @@ body {
                                 top: 13px;
                                 right: 0;
                                 opacity: 1;
-                                width: 150px;
-                                height: 200px;
-                                background: rgba(0,0,0,.85);
+                                width: 250px;
+                                height: auto;
+                                background: rgba(0, 0, 0, .85);
                                 color: white;
                                 padding: 20px;
                                 line-height: 2.4;
@@ -117,34 +182,45 @@ body {
                 }
             }
             p {
+                font-family: 'avenir', sans-serif;
                 margin: 10px 0px;
-                font-size: 14px;
+                padding: 15px;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 1px;
             }
         }
     }
-    section.map{
-        .backButt{
+    section.map {
+    	height: 400px;
+    	width: 100%;
+    	#map{
+    		height: 100%;
+    		width: 100%;
+    	}
+        .backButt {
             position: relative;
             margin: 0px auto;
             border: 3px solid #edd890;
             border-radius: 10px;
             margin-top: 15px;
             margin-bottom: 15px;
-            padding: 10px;
+            text-align: center;
+            padding: 10px 5px;
             transition: all .2s ease-in-out;
             cursor: pointer;
-            display: inline-block;
+            display: block;
+            width: 200px;
             &:hover {
                 text-decoration: none;
                 background: #edd890;
-                border: 3px solid #edd890;
-                // span {
+                border: 3px solid #edd890; // span {
                 //     &.rank-number {
                 //         background: white;
                 //         color: black;
                 //         margin-right: 40px;
                 //     }
-                }
+            }
         }
     }
 }

@@ -1,114 +1,181 @@
-body section.results .cards {
-  width: 75%;
-  position: relative;
-  margin: 0px auto;
-  border: 3px solid #edd890;
-  border-radius: 10px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding: 10px;
-  transition: all .2s ease-in-out;
-  cursor: pointer; }
-  body section.results .cards:hover {
-    text-decoration: none;
-    background: #edd890;
-    border: 3px solid #edd890; }
-    body section.results .cards:hover span.rank-number {
-      background: white;
-      color: black;
-      margin-right: 40px; }
-  body section.results .cards span.rank-number {
-    margin-right: 20px;
+body {
+  font-family: 'Indie Flower', cursive; }
+  body section.head-bar .head {
+    background-color: #edd890;
+    font-weight: bold;
     position: relative;
-    display: inline-block;
-    background: black;
-    transition: all .15s ease-in-out;
-    color: white;
-    top: -7px;
     text-align: center;
-    padding: 15px 20px;
-    margin-left: 15px; }
-  body section.results .cards h2 {
-    display: inline-block;
-    margin: 10px 0px;
-    font-size: 30px; }
-  body section.results .cards .stats {
-    position: absolute;
-    top: 10px;
-    right: 15px; }
-    body section.results .cards .stats p {
-      margin: 5px 0px;
-      font-size: 12px; }
-      body section.results .cards .stats p.abv {
-        position: relative; }
-        body section.results .cards .stats p.abv:before {
-          content: '';
-          position: absolute;
-          transition: all .2s ease-in-out;
-          top: 13px;
-          right: 0px;
-          display: block;
-          opacity: 0;
-          padding: 0px;
-          height: 0px;
-          width: 0px; }
-        body section.results .cards .stats p.abv:hover:before {
-          content: "A standard measure of how much alcohol (ethanol) is contained in a given volume of an alcoholic beverage (expressed as a volume percent)";
-          display: block;
-          position: absolute;
-          top: 13px;
-          right: 0;
-          opacity: 1;
-          width: 150px;
-          height: 160px;
-          background: rgba(0, 0, 0, 0.85);
-          color: white;
-          padding: 20px;
-          line-height: 2.4;
-          z-index: 10; }
-      body section.results .cards .stats p.ibu {
-        position: relative; }
-        body section.results .cards .stats p.ibu:before {
-          content: '';
-          position: absolute;
-          transition: all .2s ease-in-out;
-          top: 13px;
-          right: 0px;
-          display: block;
-          opacity: 0;
-          padding: 0px;
-          height: 0px;
-          width: 0px; }
-        body section.results .cards .stats p.ibu:hover:before {
-          content: "An International Bitterness Unit (IBU) is a measure of the bitterness in beer. One IBU is equal to one milligram of isomerized alpha acid per liter of beer. Isomerized alpha acids are the main bittering acids derived from hops";
-          display: block;
-          position: absolute;
-          top: 13px;
-          right: 0;
-          opacity: 1;
-          width: 150px;
-          height: 200px;
-          background: rgba(0, 0, 0, 0.85);
-          color: white;
-          padding: 20px;
-          line-height: 2.4;
-          z-index: 10; }
-  body section.results .cards p {
-    margin: 10px 0px;
-    font-size: 14px; }
-
-body section.map .backButt {
-  position: relative;
-  margin: 0px auto;
-  border: 3px solid #edd890;
-  border-radius: 10px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding: 10px;
-  transition: all .2s ease-in-out;
-  cursor: pointer;
-  display: inline-block; }
-  body section.map .backButt:hover {
-    text-decoration: none;
+    margin: 20px;
+    border-radius: 10px;
+    transition: all .2s ease-in-out; }
+    body section.head-bar .head h1 {
+      font-size: 55px;
+      padding: 15px; }
+  body .return-home {
+    height: 50px;
+    width: 50px;
+    position: fixed;
     background: #edd890;
-    border: 3px solid #edd890; }
+    color: black;
+    top: 50%;
+    cursor: pointer;
+    transition: all .33s ease-in-out .33s;
+    z-index: 11; }
+    body .return-home:before {
+      content: 'Return to homepage';
+      display: inline-block;
+      width: 75%;
+      height: auto;
+      top: 18px;
+      /* float: right; */
+      position: absolute;
+      right: 0;
+      opacity: 0;
+      transition: opacity .2s linear 0s; }
+    body .return-home:hover {
+      width: 200px;
+      transition: all .33s ease-in-out 0s; }
+      body .return-home:hover:before {
+        opacity: 1;
+        transition: opacity .2s linear .25s; }
+      body .return-home:hover span {
+        margin-left: 15px; }
+    body .return-home span {
+      margin-left: 5%;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      vertical-align: middle;
+      height: inherit;
+      margin-left: 20px;
+      transition: all .2s ease-in-out; }
+  body section.results .cards {
+    width: 75%;
+    position: relative;
+    margin: 0px auto;
+    border: 3px solid #edd890;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer; }
+    body section.results .cards:hover {
+      text-decoration: none;
+      background: #edd890;
+      border: 3px solid #edd890; }
+      body section.results .cards:hover span.rank-number {
+        background: white;
+        color: black;
+        margin-right: 40px; }
+    body section.results .cards span.rank-number {
+      margin-right: 20px;
+      position: relative;
+      display: inline-block;
+      background: black;
+      transition: all .15s ease-in-out;
+      color: white;
+      top: 0px;
+      text-align: center;
+      padding: 10px 20px;
+      margin-left: 15px;
+      font-size: 28px; }
+    body section.results .cards h2 {
+      position: relative;
+      display: inline-block;
+      margin: 10px 0px;
+      font-size: 34px;
+      top: 15px;
+      font-weight: bold; }
+    body section.results .cards .stats {
+      position: absolute;
+      top: 10px;
+      right: 15px; }
+      body section.results .cards .stats p {
+        margin: 5px 0px;
+        font-size: 11px;
+        padding: 0px; }
+        body section.results .cards .stats p.abv {
+          position: relative; }
+          body section.results .cards .stats p.abv:before {
+            content: '';
+            position: absolute;
+            transition: all .2s ease-in-out;
+            top: 13px;
+            right: 0px;
+            display: block;
+            opacity: 0;
+            padding: 0px;
+            height: 0px;
+            width: 0px; }
+          body section.results .cards .stats p.abv:hover:before {
+            content: "A standard measure of how much alcohol (ethanol) is contained in a given volume of an alcoholic beverage (expressed as a volume percent)";
+            display: block;
+            position: absolute;
+            top: 13px;
+            right: 0;
+            opacity: 1;
+            width: 250px;
+            height: auto;
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 20px;
+            line-height: 2.4;
+            z-index: 10; }
+        body section.results .cards .stats p.ibu {
+          position: relative; }
+          body section.results .cards .stats p.ibu:before {
+            content: '';
+            position: absolute;
+            transition: all .2s ease-in-out;
+            top: 13px;
+            right: 0px;
+            display: block;
+            opacity: 0;
+            padding: 0px;
+            height: 0px;
+            width: 0px; }
+          body section.results .cards .stats p.ibu:hover:before {
+            content: "An International Bitterness Unit (IBU) is a measure of the bitterness in beer. One IBU is equal to one milligram of isomerized alpha acid per liter of beer. Isomerized alpha acids are the main bittering acids derived from hops";
+            display: block;
+            position: absolute;
+            top: 13px;
+            right: 0;
+            opacity: 1;
+            width: 250px;
+            height: auto;
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 20px;
+            line-height: 2.4;
+            z-index: 10; }
+    body section.results .cards p {
+      font-family: 'avenir', sans-serif;
+      margin: 10px 0px;
+      padding: 15px;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 1px; }
+  body section.map {
+    height: 400px;
+    width: 100%; }
+    body section.map #map {
+      height: 100%;
+      width: 100%; }
+    body section.map .backButt {
+      position: relative;
+      margin: 0px auto;
+      border: 3px solid #edd890;
+      border-radius: 10px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      text-align: center;
+      padding: 10px 5px;
+      transition: all .2s ease-in-out;
+      cursor: pointer;
+      display: block;
+      width: 200px; }
+      body section.map .backButt:hover {
+        text-decoration: none;
+        background: #edd890;
+        border: 3px solid #edd890; }
