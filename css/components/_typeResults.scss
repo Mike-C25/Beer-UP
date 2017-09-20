@@ -87,7 +87,7 @@ body {
                 text-decoration: none;
                 background: #edd890;
                 border: 3px solid #edd890;
-                transform: scale(1.01);
+                // transform: scale(1.01);
                 span {
                     &.rank-number {
                         background: white;
@@ -139,7 +139,8 @@ body {
                             opacity: 0;
                             padding: 0px;
                             height: 0px;
-                            width: 0px;
+                            width: auto;
+                            z-index: 10;
                         }
                         &:hover {
                             &:before {
@@ -156,6 +157,7 @@ body {
                                 padding: 20px;
                                 line-height: 2.4;
                                 z-index: 10;
+                                max-height: 250px;
                             }
                         }
                     }
@@ -171,7 +173,8 @@ body {
                             opacity: 0;
                             padding: 0px;
                             height: 0px;
-                            width: 0px;
+                            width: auto;
+                            z-index: 10;
                         }
                         &:hover {
                             &:before {
@@ -188,6 +191,7 @@ body {
                                 padding: 20px;
                                 line-height: 2.4;
                                 z-index: 10;
+                                max-height: 250px;
                             }
                         }
                     }

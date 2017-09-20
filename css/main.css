@@ -125,6 +125,7 @@ div#double-ipa:hover {
     font-size: 18px;
     line-height: 1.4;
     padding: 12px;
+    letter-spacing: .6px;
 }
 
 .card:hover p {

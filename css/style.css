@@ -72,8 +72,7 @@ body {
     body section.results .cards:hover {
       text-decoration: none;
       background: #edd890;
-      border: 3px solid #edd890;
-      transform: scale(1.01); }
+      border: 3px solid #edd890; }
       body section.results .cards:hover span.rank-number {
         background: white;
         color: black;
@@ -117,7 +116,8 @@ body {
             opacity: 0;
             padding: 0px;
             height: 0px;
-            width: 0px; }
+            width: auto;
+            z-index: 10; }
           body section.results .cards .stats p.abv:hover:before {
             content: "A standard measure of how much alcohol (ethanol) is contained in a given volume of an alcoholic beverage (expressed as a volume percent)";
             display: block;
@@ -131,7 +131,8 @@ body {
             color: white;
             padding: 20px;
             line-height: 2.4;
-            z-index: 10; }
+            z-index: 10;
+            max-height: 250px; }
         body section.results .cards .stats p.ibu {
           position: relative; }
           body section.results .cards .stats p.ibu:before {
@@ -144,7 +145,8 @@ body {
             opacity: 0;
             padding: 0px;
             height: 0px;
-            width: 0px; }
+            width: auto;
+            z-index: 10; }
           body section.results .cards .stats p.ibu:hover:before {
             content: "An International Bitterness Unit (IBU) is a measure of the bitterness in beer. One IBU is equal to one milligram of isomerized alpha acid per liter of beer. Isomerized alpha acids are the main bittering acids derived from hops";
             display: block;
@@ -158,7 +160,8 @@ body {
             color: white;
             padding: 20px;
             line-height: 2.4;
-            z-index: 10; }
+            z-index: 10;
+            max-height: 250px; }
     body section.results .cards p {
       font-family: 'avenir', sans-serif;
       margin: 10px 0px;
