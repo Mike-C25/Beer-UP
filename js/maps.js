@@ -2,7 +2,8 @@ var marker;
 
 $(document).ready(function() {
    //Hide Map
-    $(".map").hide();
+    // $(".map").hide();
+
 
 
 });
@@ -38,8 +39,10 @@ $(document).on("click", '.backButt', function() {
     marker.setMap(null);
 
     //Transition Out Map Elements
+
+    $("#header-info").text("Click a Beer to see its original brewery location!").delay(100).fadeTo(500, 1);
+    $(".map").toggleClass("trig");
     $(".results").fadeIn(1000);
-    $(".map").toggleClass("trig")
     $(this).fadeOut();
 });
 
@@ -52,6 +55,9 @@ $(document).on("click", '.cards', function() {
 
     var latitude = Bar[iteration].location.lat;
     var longitude = Bar[iteration].location.lng;
+    var city = Bar[iteration].location.brewery_city;
+    var state = Bar[iteration].location.brewery_state;
+    var locationText = "Location: " + city + ", " + state;
 
     uluru = {
         lat: latitude,
@@ -59,11 +65,11 @@ $(document).on("click", '.cards', function() {
     };
     // console.log(latitude);
     // console.log(longitude);
-    initMap();
+    initMap(); 
+    $("#header-info").text(locationText).delay(100).fadeTo(500, 1);
     $(".results").fadeOut();
-    $(".map").fadeIn(1000);
-    $(".backButt").fadeIn(1000);
     $(".map").toggleClass("trig");
+    $(".backButt").fadeIn(1000).delay(1000);
 
 
 

@@ -89,7 +89,7 @@ $(document).ready(function() {
                     }
 
                 }
-                resultsSection.fadeIn(1000);
+                resultsSection.fadeIn(300);
             });
         }
     });

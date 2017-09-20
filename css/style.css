@@ -7,6 +7,7 @@ body {
     position: relative;
     text-align: center;
     margin: 20px;
+    padding: 20px 20px 30px 20px;
     border-radius: 10px;
     transition: all .2s ease-in-out; }
     body section.head-bar .head h1 {
@@ -14,7 +15,10 @@ body {
       padding: 15px; }
     body section.head-bar .head h2 {
       font-size: 24px;
-      padding: 10px; }
+      padding: 10px;
+      transition: all .2s ease-in-out; }
+      body section.head-bar .head h2#header-info {
+        height: 50px; }
   body .return-home {
     height: 50px;
     width: 50px;
@@ -43,7 +47,8 @@ body {
         opacity: 1;
         transition: opacity .2s linear .25s; }
       body .return-home:hover span {
-        margin-left: 15px; }
+        margin-left: 15px;
+        transition: all .2s ease-in-out .333s; }
     body .return-home span {
       margin-left: 5%;
       display: flex;
@@ -52,7 +57,7 @@ body {
       vertical-align: middle;
       height: inherit;
       margin-left: 20px;
-      transition: all .2s ease-in-out; }
+      transition: all .2s ease-in-out 0s; }
   body section.results .cards {
     width: 75%;
     position: relative;
@@ -166,9 +171,11 @@ body {
     width: 100%;
     position: absolute;
     left: -100%;
-    transition: all .1s ease-in-out; }
+    transition: all 1s ease-in-out;
+    opacity: .00001; }
     body section.map.trig {
-      left: 0; }
+      left: 0;
+      opacity: 1; }
     body section.map #map {
       height: 100%;
       width: 100%; }
